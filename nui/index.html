@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mono Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="root" class="hidden">
+        <div class="backdrop"></div>
+
+        <main class="panel">
+
+            <aside class="sidebar">
+                <div class="logo">
+                    <span class="logo-main">MONO</span>
+                    <span class="logo-sub">ADMIN</span>
+                </div>
+
+                <nav id="nav" class="nav"></nav>
+
+                <div class="sidebar-footer">
+                    <span class="admin-label">ZALOGOWANY</span>
+                    <span id="admin-name" class="admin-name">—</span>
+                    <span class="hint">ESC — zamknij panel</span>
+                </div>
+            </aside>
+
+            <section class="content">
+                <header class="topbar">
+                    <h1 id="tab-title">Gracze</h1>
+
+                    <input
+                        id="search"
+                        class="search"
+                        type="text"
+                        placeholder="Szukaj..."
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+
+                    <button id="refresh" class="btn">Odśwież</button>
+                    <button id="close" class="btn icon" title="Zamknij">✕</button>
+                </header>
+
+                <div id="body" class="body">
+                    <div id="list" class="list"></div>
+                    <aside id="drawer" class="drawer"></aside>
+                </div>
+            </section>
+
+        </main>
+
+        <div id="modal-layer" class="modal-layer hidden"></div>
+        <div id="toasts" class="toasts"></div>
+    </div>
+
+    <div id="hud" class="hud hidden"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
